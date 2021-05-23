@@ -38,15 +38,6 @@ AddEventHandler('Announceureport', function()
 end)
 
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-
-
-ESX.RegisterServerCallback('getpoleemploi2', function(source, cb)
-    MySQL.Async.fetchAll('SELECT model, name, price FROM vehicles', {}, function(result)
-        cb(result)  
-    end)
-end)
-
 
 
 
